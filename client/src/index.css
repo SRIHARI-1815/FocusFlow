@@ -1,0 +1,445 @@
+/* =========================================================
+   FOCUSFLOW — GLOBAL DESIGN SYSTEM
+   Clean Minimal / Modern Productivity UI
+   ========================================================= */
+
+:root {
+  --ff-bg: #f7f7f5;
+  --ff-surface: #ffffff;
+  --ff-surface-soft: #f1f2ee;
+
+  --ff-text: #171a18;
+  --ff-text-secondary: #666b67;
+  --ff-text-muted: #8a8f8b;
+
+  --ff-border: #e5e7e3;
+  --ff-border-dark: #d5d8d3;
+
+  --ff-primary: #4f6f52;
+  --ff-primary-dark: #3f5d43;
+  --ff-primary-soft: #e8eee8;
+
+  --ff-success: #4f7d5b;
+  --ff-danger: #b85c5c;
+  --ff-warning: #b58a45;
+  --ff-info: #52758a;
+
+  --ff-radius: 12px;
+  --ff-radius-sm: 8px;
+
+  --ff-shadow: 0 1px 3px rgba(23, 26, 24, 0.04);
+  --ff-shadow-hover: 0 8px 24px rgba(23, 26, 24, 0.07);
+
+  --ff-transition: 180ms ease;
+}
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  background: var(--ff-bg);
+  color: var(--ff-text);
+
+  font-size: 15px;
+  line-height: 1.5;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: inherit;
+}
+
+/* =========================================================
+   HEADINGS
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--ff-text);
+  letter-spacing: -0.025em;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 650;
+}
+
+/* =========================================================
+   TEXT
+   ========================================================= */
+
+.text-muted {
+  color: var(--ff-text-secondary) !important;
+}
+
+/* =========================================================
+   BOOTSTRAP OVERRIDES
+   ========================================================= */
+
+.container {
+  max-width: 1320px;
+}
+
+.card {
+  background: var(--ff-surface);
+  border: 1px solid var(--ff-border) !important;
+  border-radius: var(--ff-radius);
+  box-shadow: var(--ff-shadow);
+}
+
+.card:hover {
+  box-shadow: var(--ff-shadow-hover);
+  transition: box-shadow var(--ff-transition);
+}
+
+.card-body {
+  color: var(--ff-text);
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.btn {
+  border-radius: var(--ff-radius-sm);
+  font-weight: 500;
+  padding: 0.55rem 1rem;
+  transition:
+    background-color var(--ff-transition),
+    border-color var(--ff-transition),
+    color var(--ff-transition),
+    transform var(--ff-transition);
+}
+
+.btn:focus {
+  box-shadow: 0 0 0 3px rgba(79, 111, 82, 0.14) !important;
+}
+
+.btn-primary {
+  background: var(--ff-primary);
+  border-color: var(--ff-primary);
+}
+
+.btn-primary:hover {
+  background: var(--ff-primary-dark);
+  border-color: var(--ff-primary-dark);
+}
+
+.btn-dark {
+  background: var(--ff-text);
+  border-color: var(--ff-text);
+}
+
+.btn-dark:hover {
+  background: #000000;
+  border-color: #000000;
+}
+
+.btn-outline-primary {
+  color: var(--ff-primary);
+  border-color: var(--ff-primary);
+}
+
+.btn-outline-primary:hover {
+  background: var(--ff-primary);
+  border-color: var(--ff-primary);
+}
+
+.btn-outline-secondary {
+  color: var(--ff-text-secondary);
+  border-color: var(--ff-border-dark);
+}
+
+.btn-outline-secondary:hover {
+  background: var(--ff-surface-soft);
+  color: var(--ff-text);
+  border-color: var(--ff-border-dark);
+}
+
+/* =========================================================
+   FORMS
+   ========================================================= */
+
+.form-label {
+  color: var(--ff-text);
+  font-size: 0.875rem;
+  margin-bottom: 0.45rem;
+}
+
+.form-control,
+.form-select {
+  min-height: 44px;
+
+  background-color: var(--ff-surface);
+  border: 1px solid var(--ff-border-dark);
+
+  border-radius: var(--ff-radius-sm);
+
+  color: var(--ff-text);
+
+  font-size: 0.925rem;
+
+  transition:
+    border-color var(--ff-transition),
+    box-shadow var(--ff-transition);
+}
+
+.form-control::placeholder {
+  color: var(--ff-text-muted);
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: var(--ff-surface);
+
+  border-color: var(--ff-primary);
+
+  color: var(--ff-text);
+
+  box-shadow:
+    0 0 0 3px rgba(79, 111, 82, 0.1);
+}
+
+textarea.form-control {
+  min-height: auto;
+}
+
+/* =========================================================
+   TABLES
+   ========================================================= */
+
+.table {
+  --bs-table-bg: transparent;
+
+  color: var(--ff-text);
+
+  margin-bottom: 0;
+}
+
+.table > :not(caption) > * > * {
+  border-bottom-color: var(--ff-border);
+  padding: 0.9rem 0.75rem;
+}
+
+.table thead th {
+  color: var(--ff-text-secondary);
+
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+.table tbody tr {
+  transition: background-color var(--ff-transition);
+}
+
+.table tbody tr:hover {
+  background: var(--ff-surface-soft);
+}
+
+/* =========================================================
+   BADGES
+   ========================================================= */
+
+.badge {
+  border-radius: 6px;
+  font-weight: 500;
+  padding: 0.4em 0.65em;
+}
+
+/* Replace Bootstrap's overly bright primary */
+.text-bg-primary,
+.bg-primary {
+  background-color: var(--ff-primary) !important;
+}
+
+/* =========================================================
+   PROGRESS
+   ========================================================= */
+
+.progress {
+  background: var(--ff-surface-soft);
+  border-radius: 999px;
+}
+
+.progress-bar {
+  background: var(--ff-primary);
+}
+
+/* =========================================================
+   ALERTS
+   ========================================================= */
+
+.alert {
+  border-radius: var(--ff-radius-sm);
+  border-width: 1px;
+}
+
+/* =========================================================
+   DROPDOWNS
+   ========================================================= */
+
+.dropdown-menu {
+  border: 1px solid var(--ff-border);
+  border-radius: var(--ff-radius-sm);
+
+  box-shadow: var(--ff-shadow-hover);
+
+  padding: 0.4rem;
+}
+
+.dropdown-item {
+  border-radius: 6px;
+  padding: 0.55rem 0.75rem;
+}
+
+.dropdown-item:hover {
+  background: var(--ff-surface-soft);
+}
+
+/* =========================================================
+   NAVIGATION SUPPORT
+   ========================================================= */
+
+.nav-link {
+  color: var(--ff-text-secondary);
+  transition:
+    color var(--ff-transition),
+    background-color var(--ff-transition);
+}
+
+.nav-link:hover {
+  color: var(--ff-text);
+}
+
+/* =========================================================
+   UTILITY CLASSES
+   ========================================================= */
+
+.ff-surface {
+  background: var(--ff-surface);
+}
+
+.ff-surface-soft {
+  background: var(--ff-surface-soft);
+}
+
+.ff-border {
+  border: 1px solid var(--ff-border);
+}
+
+.ff-primary {
+  color: var(--ff-primary);
+}
+
+.ff-text {
+  color: var(--ff-text);
+}
+
+.ff-text-secondary {
+  color: var(--ff-text-secondary);
+}
+
+.ff-section-title {
+  font-size: 1.05rem;
+  font-weight: 650;
+  margin-bottom: 0.25rem;
+}
+
+.ff-section-subtitle {
+  color: var(--ff-text-secondary);
+  font-size: 0.875rem;
+}
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cfd3ce;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b8bdb8;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .card-body {
+    padding: 1.1rem !important;
+  }
+
+  .btn {
+    padding: 0.5rem 0.85rem;
+  }
+}
